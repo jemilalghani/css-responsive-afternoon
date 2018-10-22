@@ -1,32 +1,104 @@
-.App {
-  text-align: center;
+.App{
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+header {
+  width: 100%;
+  height: 80px;
+  background: transparent;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header>div{
+  max-width: 1000px;
+  width: 100%;
+  height: 100%;
+  margin:0 auto;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.AppHeader{
+background-image: url("https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+position: absolute;
+height: 100vh;
+width: 100vw;
+margin: auto;
+}
+header nav ul{
+  min-width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+header div a{
+  color: rgb(185, 151, 39);
+  text-decoration: none;
+  font-size: 24px;
+  font-family: cursive;
+  font-weight: 900;
+  padding: 20px 0;
+}
+header nav ul a{
+  color:white;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 100;
+  padding: 0px 50px;
+}
+header div button{
+  display: none;
+}
+.body{
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 20%;
 }
-
-.App-link {
-  color: #61dafb;
+.body h1{
+  font-size: 40px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.body h2{
+  font-size:30px;
+}
+@media screen and (max-width:700px){
+  header{
+    background: rgb(46, 46, 46);
+    height: 50px;
+    position: fixed;
   }
-  to {
-    transform: rotate(360deg);
+  .AppHeader{
+    height: 50vh;
   }
+  header div button {
+    display: initial;
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    right: 10px;
+    z-index: 3;
+  }
+  header nav{
+    position: fixed;
+    right: 0 ;
+    top:49px;
+    transform: translate(0px,-300px);
+    background: transparent;
+    color: transparent;
+    transition:.3s ease-in-out;
+  }
+  header nav ul{
+    flex-direction: column;
+    justify-content: space-evenly;
+    background:rgb(46, 46, 46);
+    min-width:100vw;
+ 
+  }
+  header nav li{
+    padding: 10px 0;
+  }
+  header .show{
+    transform: translate(0px,0px);
+}
 }

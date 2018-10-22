@@ -74,9 +74,12 @@ header div button{
   header div button {
     display: initial;
     position: fixed;
-    height: 60px;
-    width: 60px;
+    height: 30px;
+    width: 50px;
     right: 10px;
+    background: rgb(185, 151, 39);
+    color: white;
+    border-radius: 10px;
     z-index: 3;
   }
   header nav{
@@ -84,8 +87,6 @@ header div button{
     right: 0 ;
     top:49px;
     transform: translate(0px,-300px);
-    background: transparent;
-    color: transparent;
     transition:.3s ease-in-out;
   }
   header nav ul{
@@ -100,5 +101,6 @@ header div button{
   }
   header .show{
     transform: translate(0px,0px);
+    
 }
 }
